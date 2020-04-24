@@ -34,14 +34,19 @@ public class BinaryTree {
         }
         else{
             int lheight = height(root.left);
-            System.out.println("LHeight: " + lheight);
+            System.out.println("LeftHeight: " + lheight);
+
             int rheight = height(root.right);
-            System.out.println("RHeight: " + rheight);
+            System.out.println("RightHeight: " + rheight);
+
 
             if(lheight > rheight){
+                System.out.println("LHeight: " + (lheight +1));
                 return(lheight+1);
+
             }
             else{
+                System.out.println("RHeight: " + (rheight +1));
                 return(rheight+1);
             }
         }
@@ -67,8 +72,8 @@ public class BinaryTree {
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);
-//        tree.root.left.left = new Node(4);
-//        tree.root.left.right = new Node(5);
+        tree.root.left.left = new Node(4);
+        tree.root.left.right = new Node(5);
 
         System.out.println("Level order traversal of binary tree is ");
 
